@@ -64,9 +64,19 @@ Route102_EventScript_Rick::
 	end
 
 Route102_EventScript_Tiana::
-	trainerbattle_single TRAINER_TIANA, Route102_Text_TianaIntro, Route102_Text_TianaDefeated
+	trainerbattle_single TRAINER_TIANA, Route102_Text_TianaIntro, Route102_Text_TianaDefeated, Route102_EventScript_LevelCap
 	msgbox Route102_Text_TianaPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route102_EventScript_LevelCap::
+	setvar B_LEVEL_CAP_VARIABLE, 15
+	msgbox Route102_Text_TianaLevelCap, MSGBOX_AUTOCLOSE
+	end
+
+Route102_Text_TianaLevelCap:
+	.string "TIANA: You may notice that you can\n"
+	.string "now level up your POKéMON even more.\p"
+	.string "Good luck with your career!$"
 
 Route102_EventScript_Allen::
 	trainerbattle_single TRAINER_ALLEN, Route102_Text_AllenIntro, Route102_Text_AllenDefeated

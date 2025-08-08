@@ -1016,5 +1016,8 @@ u32 GetItemStatus2Mask(u16 itemId)
 
 u32 GetItemSellPrice(u32 itemId)
 {
-    return GetItemPrice(itemId) / ITEM_SELL_FACTOR;
+    if (itemId == ITEM_RARE_CANDY)
+        return 0;
+    else 
+        return GetItemPrice(itemId) / ITEM_SELL_FACTOR;
 }

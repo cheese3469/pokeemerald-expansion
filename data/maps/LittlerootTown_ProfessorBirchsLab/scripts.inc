@@ -520,6 +520,8 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedex::
 	setvar VAR_OLDALE_TOWN_STATE, 1
 	setvar VAR_LITTLEROOT_RIVAL_STATE, 4
 	setvar VAR_LITTLEROOT_TOWN_STATE, 3
+	setflag FLAG_SYS_NATIONAL_DEX
+	special EnableNationalPokedex
 	releaseall
 	end
 

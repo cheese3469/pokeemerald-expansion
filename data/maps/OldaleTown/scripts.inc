@@ -395,3 +395,40 @@ OldaleTown_Text_TownSign:
 	.string "OLDALE TOWN\n"
 	.string "“Where things start off scarce.”$"
 
+OldaleTown_EventScript_Candy_Man::
+	lock
+	faceplayer
+	msgbox OldaleTown_EventScript_Candy_Man_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq OldaleTown_EventScript_Candy_Man_2
+	compare VAR_RESULT, NO
+	goto_if_eq OldaleTown_EventScript_Candy_Man_3
+    
+OldaleTown_EventScript_Candy_Man_1:
+	release
+	return
+
+OldaleTown_EventScript_Candy_Man_2:
+	giveitem ITEM_RARE_CANDY, 99
+	compare VAR_RESULT, TRUE
+	goto_if_eq OldaleTown_EventScript_Candy_Man_6
+	goto OldaleTown_EventScript_Candy_Man_1
+
+OldaleTown_EventScript_Candy_Man_3:
+	msgbox OldaleTown_EventScript_Candy_Man_Text_2, MSGBOX_DEFAULT
+	goto OldaleTown_EventScript_Candy_Man_1
+
+OldaleTown_EventScript_Candy_Man_6:
+	msgbox OldaleTown_EventScript_Candy_Man_Text_1
+	goto OldaleTown_EventScript_Candy_Man_1
+
+OldaleTown_EventScript_Candy_Man_Text_0:
+	.string "Hello!\n"
+    .string "I'm the Candy Man.\p"
+    .string "Would you like some Rare Candy?$"
+
+OldaleTown_EventScript_Candy_Man_Text_1:
+	.string "Enjoy your candy!$"
+
+OldaleTown_EventScript_Candy_Man_Text_2:
+	.string "Okay. Goodbye.$"
