@@ -117,16 +117,16 @@
 #define TRAINER_VALERIE_3                   111
 #define TRAINER_VALERIE_4                   112
 #define TRAINER_VALERIE_5                   113
-#define TRAINER_CINDY_1                     114
+#define TRAINER_CINDY                       114
 #define TRAINER_DAPHNE                      115
 #define TRAINER_GRUNT_SPACE_CENTER_2        116
-#define TRAINER_CINDY_2                     117
+#define TRAINER_ROUTE102_LEAF               117
 #define TRAINER_BRIANNA                     118
 #define TRAINER_NAOMI                       119
-#define TRAINER_CINDY_3                     120
-#define TRAINER_CINDY_4                     121
-#define TRAINER_CINDY_5                     122
-#define TRAINER_CINDY_6                     123
+#define TRAINER_CINDY_3                     120 // UNUSED
+#define TRAINER_CINDY_4                     121 // UNUSED
+#define TRAINER_CINDY_5                     122 // UNUSED
+#define TRAINER_CINDY_6                     123 // UNUSED
 #define TRAINER_MELISSA                     124
 #define TRAINER_SHEILA                      125
 #define TRAINER_SHIRLEY                     126
@@ -139,13 +139,13 @@
 #define TRAINER_JESSICA_3                   133
 #define TRAINER_JESSICA_4                   134
 #define TRAINER_JESSICA_5                   135
-#define TRAINER_WINSTON_1                   136
+#define TRAINER_WINSTON                     136
 #define TRAINER_MOLLIE                      137
 #define TRAINER_GARRET                      138
-#define TRAINER_WINSTON_2                   139
-#define TRAINER_WINSTON_3                   140
-#define TRAINER_WINSTON_4                   141
-#define TRAINER_WINSTON_5                   142
+#define TRAINER_WINSTON_2                   139 // UNUSED
+#define TRAINER_WINSTON_3                   140 // UNUSED
+#define TRAINER_WINSTON_4                   141 // UNUSED
+#define TRAINER_WINSTON_5                   142 // UNUSED
 #define TRAINER_STEVE_1                     143
 #define TRAINER_THALIA_1                    144
 #define TRAINER_MARK                        145
@@ -321,7 +321,7 @@
 #define TRAINER_SHELBY_3                    315
 #define TRAINER_SHELBY_4                    316
 #define TRAINER_SHELBY_5                    317
-#define TRAINER_CALVIN_1                    318
+#define TRAINER_CALVIN                      318
 #define TRAINER_BILLY                       319
 #define TRAINER_JOSH                        320
 #define TRAINER_TOMMY                       321
@@ -331,10 +331,10 @@
 #define TRAINER_KATELYNN                    325
 #define TRAINER_JAYLEN                      326
 #define TRAINER_DILLON                      327
-#define TRAINER_CALVIN_2                    328
-#define TRAINER_CALVIN_3                    329
-#define TRAINER_CALVIN_4                    330
-#define TRAINER_CALVIN_5                    331
+#define TRAINER_CALVIN_2                    328 // UNUSED
+#define TRAINER_CALVIN_3                    329 // UNUSED
+#define TRAINER_CALVIN_4                    330 // UNUSED
+#define TRAINER_CALVIN_5                    331 // UNUSED
 #define TRAINER_EDDIE                       332
 #define TRAINER_ALLEN                       333
 #define TRAINER_TIMMY                       334
@@ -607,13 +607,13 @@
 #define TRAINER_MAXIE_MAGMA_HIDEOUT         601
 #define TRAINER_MAXIE_MT_CHIMNEY            602
 #define TRAINER_TIANA                       603
-#define TRAINER_HALEY_1                     604
+#define TRAINER_HALEY                       604
 #define TRAINER_JANICE                      605
 #define TRAINER_VIVI                        606
-#define TRAINER_HALEY_2                     607
-#define TRAINER_HALEY_3                     608
-#define TRAINER_HALEY_4                     609
-#define TRAINER_HALEY_5                     610
+#define TRAINER_HALEY_2                     607 // UNUSED
+#define TRAINER_HALEY_3                     608 // UNUSED
+#define TRAINER_HALEY_4                     609 // UNUSED
+#define TRAINER_HALEY_5                     610 // UNUSED
 #define TRAINER_SALLY                       611
 #define TRAINER_ROBIN                       612
 #define TRAINER_ANDREA                      613
@@ -624,11 +624,11 @@
 #define TRAINER_DOUG                        618
 #define TRAINER_GREG                        619
 #define TRAINER_KENT                        620
-#define TRAINER_JAMES_1                     621
-#define TRAINER_JAMES_2                     622
-#define TRAINER_JAMES_3                     623
-#define TRAINER_JAMES_4                     624
-#define TRAINER_JAMES_5                     625
+#define TRAINER_JAMES                       621
+#define TRAINER_JAMES_2                     622 // UNUSED
+#define TRAINER_JAMES_3                     623 // UNUSED
+#define TRAINER_JAMES_4                     624 // UNUSED
+#define TRAINER_JAMES_5                     625 // UNUSED
 #define TRAINER_BRICE                       626
 #define TRAINER_TRENT_1                     627
 #define TRAINER_LENNY                       628
@@ -858,12 +858,15 @@
 #define TRAINER_LEAF                        852
 #define TRAINER_BRENDAN_PLACEHOLDER         853
 #define TRAINER_MAY_PLACEHOLDER             854
+#define TRAINER_VERONICA                    855
+#define TRAINER_DUSTIN                      856
+#define TRAINER_KYLER                       857
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      855
+#define TRAINERS_COUNT                      858
 #define MAX_TRAINERS_COUNT                  864
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 

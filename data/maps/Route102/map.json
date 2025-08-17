@@ -141,10 +141,57 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route102_EventScript_Allen",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_ROUTE102_LEAF",
+      "graphics_id": "OBJ_EVENT_GFX_LEAF",
+      "x": 39,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "FLAG_HIDE_ROUTE102_LEAF"
+    },
+    {
+      "local_id": "LOCALID_ROUTE102_LEAF2",
+      "graphics_id": "OBJ_EVENT_GFX_LEAF",
+      "x": 1,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "Route102_EventScript_LeafBattle",
+      "flag": "FLAG_HIDE_ROUTE102_LEAF2"
     }
   ],
   "warp_events": [],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 48,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_ROUTE102_STATE",
+      "var_value": "0",
+      "script": "Route102_EventScript_Leaf0"
+    },
+    {
+      "type": "trigger",
+      "x": 48,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_ROUTE102_STATE",
+      "var_value": "0",
+      "script": "Route102_EventScript_Leaf1"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",
