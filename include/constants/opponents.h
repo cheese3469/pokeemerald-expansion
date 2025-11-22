@@ -123,10 +123,10 @@
 #define TRAINER_ROUTE102_LEAF               117
 #define TRAINER_BRIANNA                     118
 #define TRAINER_NAOMI                       119
-#define TRAINER_CINDY_3                     120 // UNUSED
-#define TRAINER_CINDY_4                     121 // UNUSED
-#define TRAINER_CINDY_5                     122 // UNUSED
-#define TRAINER_CINDY_6                     123 // UNUSED
+#define TRAINER_LILY                        120
+#define TRAINER_ZACK                        121
+#define TRAINER_PETALBURG_WOODS_LEAF        122
+#define TRAINER_KENZIE                      123
 #define TRAINER_MELISSA                     124
 #define TRAINER_SHEILA                      125
 #define TRAINER_SHIRLEY                     126
@@ -142,10 +142,10 @@
 #define TRAINER_WINSTON                     136
 #define TRAINER_MOLLIE                      137
 #define TRAINER_GARRET                      138
-#define TRAINER_WINSTON_2                   139 // UNUSED
-#define TRAINER_WINSTON_3                   140 // UNUSED
-#define TRAINER_WINSTON_4                   141 // UNUSED
-#define TRAINER_WINSTON_5                   142 // UNUSED
+#define TRAINER_LIAM                        139
+#define TRAINER_OSWALD                      140
+#define TRAINER_RUSSELL                     141
+#define TRAINER_BRAYDEN                     142
 #define TRAINER_STEVE_1                     143
 #define TRAINER_THALIA_1                    144
 #define TRAINER_MARK                        145
@@ -276,19 +276,19 @@
 #define TRAINER_WINONA_1                    270
 #define TRAINER_TATE_AND_LIZA_1             271
 #define TRAINER_JUAN_1                      272
-#define TRAINER_JERRY_1                     273
+#define TRAINER_JERRY                       273
 #define TRAINER_TED                         274
 #define TRAINER_PAUL                        275
-#define TRAINER_JERRY_2                     276
-#define TRAINER_JERRY_3                     277
-#define TRAINER_JERRY_4                     278
-#define TRAINER_JERRY_5                     279
-#define TRAINER_KAREN_1                     280
+#define TRAINER_TYLER                       276
+#define TRAINER_ADAM                        277
+#define TRAINER_ABE                         278
+#define TRAINER_RUSTY                       279
+#define TRAINER_KAREN                       280
 #define TRAINER_GEORGIA                     281
-#define TRAINER_KAREN_2                     282
-#define TRAINER_KAREN_3                     283
-#define TRAINER_KAREN_4                     284
-#define TRAINER_KAREN_5                     285
+#define TRAINER_FRANK                       282
+#define TRAINER_KAREN_3                     283 // UNUSED
+#define TRAINER_KAREN_4                     284 // UNUSED
+#define TRAINER_KAREN_5                     285 // UNUSED
 #define TRAINER_KATE_AND_JOY                286
 #define TRAINER_ANNA_AND_MEG_1              287
 #define TRAINER_ANNA_AND_MEG_2              288

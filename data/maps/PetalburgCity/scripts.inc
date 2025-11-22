@@ -226,6 +226,10 @@ PetalburgCity_EventScript_CitySign::
 	msgbox PetalburgCity_Text_CitySign, MSGBOX_SIGN
 	end
 
+PetalburgCity_EventScript_House::
+	msgbox PetalburgCity_Text_House, MSGBOX_SIGN
+	end
+
 PetalburgCity_EventScript_Gentleman::
 	msgbox PetalburgCity_Text_FullPartyExplanation, MSGBOX_NPC
 	end
@@ -717,6 +721,10 @@ PetalburgCity_Text_ThisIsPetalburgGym:
 PetalburgCity_Text_ThisIsGymSign:
 	.string "This is the GYM's sign. Look for it\n"
 	.string "whenever you're looking for a GYM.$"
+
+PetalburgCity_Text_House:
+	.string "House for sale.\n"
+	.string "Call Steven for more info.$"
 
 PetalburgCity_Text_WaterReflection:
 	.string "My face is reflected in the water.\p"

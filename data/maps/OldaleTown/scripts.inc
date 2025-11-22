@@ -866,15 +866,3 @@ OldaleTown_EventScript_Candy_Man_Text_1:
 OldaleTown_EventScript_Candy_Man_Text_2:
 # 434 "data/maps/OldaleTown/scripts.pory"
 	.string "Okay. Goodbye.$"
-
-Test_Porygon::
-# 438 "data/maps/OldaleTown/scripts.pory"
-	setvar B_LEVEL_CAP_VARIABLE, 10
-# 439 "data/maps/OldaleTown/scripts.pory"
-	giveitem ITEM_POTION, 900
-# 440 "data/maps/OldaleTown/scripts.pory"
-	giveitem ITEM_MAX_ELIXIR, 100
-# 441 "data/maps/OldaleTown/scripts.pory"
-	release
-	end
-

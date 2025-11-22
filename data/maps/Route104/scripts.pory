@@ -871,7 +871,7 @@ Route104_EventScript_BuySomethingNice::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route104_Text_BuySomethingNice, MSGBOX_AUTOCLOSE
-	giveitem ITEM_NUGGET, 2
+	giveitem ITEM_NUGGET, 1
 	release
 	end
 
@@ -1092,4 +1092,42 @@ text Route104_Text_VeronicaPostBattle {
 	"Picnic at the beach?\n"
 	"Or in the woods?\l"
 	"It's an impossible choice!$"
+    }
+
+script Route104_EventScript_Zack {
+	trainerbattle_single(TRAINER_ZACK, Route104_Text_ZackIntro, Route104_Text_ZackDefeat)
+	msgbox(Route104_Text_ZackPostBattle, MSGBOX_AUTOCLOSE)
+	end 
+}
+
+text Route104_Text_ZackIntro {
+	"Look what I found! It's so cool, right?$"
+    }
+
+text Route104_Text_ZackDefeat {
+	"Okay, you can keep it.$"
+    }
+
+text Route104_Text_ZackPostBattle {
+	"I'm sure I can find another stick to\n"
+	"burn around here somewhere.$"
+    }
+
+script Route104_EventScript_Kenzie {
+	trainerbattle_single(TRAINER_KENZIE, Route104_Text_KenzieIntro, Route104_Text_KenzieDefeat)
+	msgbox(Route104_Text_KenziePostBattle, MSGBOX_AUTOCLOSE)
+	end 
+}
+
+text Route104_Text_KenzieIntro {
+	"Hi, wanna battle?\n"
+	"I bet you didn't see me there!$"
+    }
+
+text Route104_Text_KenzieDefeat {
+	"So much for the element of surprise...$"
+    }
+
+text Route104_Text_KenziePostBattle {
+	"I'm hiding in plain sight.$"
     }

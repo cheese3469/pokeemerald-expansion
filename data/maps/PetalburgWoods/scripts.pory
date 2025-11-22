@@ -245,22 +245,6 @@ PetalburgWoods_EventScript_Boy2::
 	msgbox PetalburgWoods_Text_HiddenItemsExplanation, MSGBOX_NPC
 	end
 
-PetalburgWoods_EventScript_Girl::
-	lock
-	faceplayer
-	goto_if_set FLAG_RECEIVED_MIRACLE_SEED, PetalburgWoods_EventScript_ExplainMiracleSeed
-	msgbox PetalburgWoods_Text_TryUsingThisItem, MSGBOX_DEFAULT
-	giveitem ITEM_MIRACLE_SEED
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_MIRACLE_SEED
-	release
-	end
-
-PetalburgWoods_EventScript_ExplainMiracleSeed::
-	msgbox PetalburgWoods_Text_MiracleSeedExplanation, MSGBOX_DEFAULT
-	release
-	end
-
 PetalburgWoods_EventScript_Sign1::
 	msgbox PetalburgWoods_Text_TrainerTipsExperience, MSGBOX_SIGN
 	end
@@ -377,20 +361,6 @@ PetalburgWoods_Text_HiddenItemsExplanation:
 	.string "That's why I always check where I'm\n"
 	.string "walking.$"
 
-PetalburgWoods_Text_TryUsingThisItem:
-	.string "Oh, neat!\n"
-	.string "That's the BADGE from RUSTBORO GYM!\p"
-	.string "You must be a TRAINER.\n"
-	.string "You should try using this item.$"
-
-PetalburgWoods_Text_MiracleSeedExplanation:
-	.string "It's a MIRACLE SEED.\n"
-	.string "If a POKéMON holds that item, its\l"
-	.string "GRASS-type moves become stronger.\p"
-	.string "Besides MIRACLE SEED, I think there are\n"
-	.string "other convenient items for POKéMON\l"
-	.string "to hold.$"
-
 PetalburgWoods_Text_TrainerTipsExperience:
 	.string "TRAINER TIPS\p"
 	.string "Any POKéMON that appears even once\n"
@@ -404,35 +374,204 @@ PetalburgWoods_Text_TrainerTipsExperience:
 `
 
 script PetalburgWoods_EventScript_Dustin {
-	trainerbattle_single(TRAINER_DUSTIN, Route104_Text_DustinIntro, Route104_Text_DustinDefeat)
-	msgbox(Route104_Text_DustinPostBattle, MSGBOX_AUTOCLOSE)
+	trainerbattle_single(TRAINER_DUSTIN, PetalburgWoods_Text_DustinIntro, PetalburgWoods_Text_DustinDefeat)
+	msgbox(PetalburgWoods_Text_DustinPostBattle, MSGBOX_AUTOCLOSE)
 	end 
 }
-text Route104_Text_DustinIntro {
+text PetalburgWoods_Text_DustinIntro {
 	"Hey! I was playing with that!$"
     }
 
-text Route104_Text_DustinDefeat {
+text PetalburgWoods_Text_DustinDefeat {
 	"Fine, you can have a turn..."
     }
 
-text Route104_Text_DustinPostBattle {
+text PetalburgWoods_Text_DustinPostBattle {
 	"Do you want to play in the trees with me?$"
     }
 
 script PetalburgWoods_EventScript_Kyler {
-	trainerbattle_single(TRAINER_KYLER, Route104_Text_KylerIntro, Route104_Text_KylerDefeat)
-	msgbox(Route104_Text_KylerPostBattle, MSGBOX_AUTOCLOSE)
+	trainerbattle_single(TRAINER_KYLER, PetalburgWoods_Text_KylerIntro, PetalburgWoods_Text_KylerDefeat)
+	msgbox(PetalburgWoods_Text_KylerPostBattle, MSGBOX_AUTOCLOSE)
 	end 
 }
-text Route104_Text_KylerIntro {
+text PetalburgWoods_Text_KylerIntro {
 	"Do you want to hear some bug facts?$"
     }
 
-text Route104_Text_KylerDefeat {
+text PetalburgWoods_Text_KylerDefeat {
 	"Okay, no bug facts this time."
     }
 
-text Route104_Text_KylerPostBattle {
+text PetalburgWoods_Text_KylerPostBattle {
 	"I really like bugs.$"
     }
+
+script PetalburgWoods_EventScript_Frank {
+	trainerbattle_single(TRAINER_FRANK, PetalburgWoods_Text_FrankIntro, PetalburgWoods_Text_FrankDefeat)
+	msgbox(PetalburgWoods_Text_FrankPostBattle, MSGBOX_AUTOCLOSE)
+	end 
+}
+text PetalburgWoods_Text_FrankIntro {
+	"Me and my bugs are ready to rumble!$"
+    }
+
+text PetalburgWoods_Text_FrankDefeat {
+	"Uh oh, my bugs got tumbled!"
+    }
+
+text PetalburgWoods_Text_FrankPostBattle {
+	"My bugs are rough and tough!$"
+    }
+
+script PetalburgWoods_EventScript_Lily {
+	trainerbattle_single(TRAINER_LILY, PetalburgWoods_Text_LilyIntro, PetalburgWoods_Text_LilyDefeat, PetalburgWoods_EventScript_MiracleSeed)
+	if (flag(FLAG_RECEIVED_MIRACLE_SEED) == FALSE) {
+		goto (PetalburgWoods_EventScript_MiracleSeed)
+	}
+	else {
+		msgbox(PetalburgWoods_Text_LilyPostBattle, MSGBOX_AUTOCLOSE)
+	}
+	end
+}
+
+text PetalburgWoods_Text_LilyIntro {
+	"Look at this cool seed I found!\n"
+	"You can have it if you battle with me!$"
+}
+
+text PetalburgWoods_Text_LilyDefeat {
+	"Thanks for fighting, hope you enjoy\n"
+	"the cool seed!$"
+}
+
+text PetalburgWoods_Text_LilyPostBattle {
+	"Don't worry, there are plenty more\n"
+	"cool seeds I can find!$"
+}
+
+script PetalburgWoods_EventScript_MiracleSeed {
+	msgbox (PetalburgWoods_Text_HaveThisSeed, MSGBOX_AUTOCLOSE)
+	giveitem (ITEM_MIRACLE_SEED)
+	if (var(VAR_RESULT) == FALSE) {
+		goto (Common_EventScript_ShowBagIsFull)
+	}
+	else {
+		setflag (FLAG_RECEIVED_MIRACLE_SEED)
+		msgbox (PetalburgWoods_Text_TryBattlingOthers, MSGBOX_AUTOCLOSE)
+	}
+	end
+}
+
+text PetalburgWoods_Text_HaveThisSeed {
+	"Here, take this cool seed I found,\n"
+	"it's a MIRACLE SEED. If a POKéMON\l"
+	"holds that item, its GRASS-type moves\l"
+	"become stronger.$"
+}
+
+text PetalburgWoods_Text_TryBattlingOthers {
+	"There are some boys on Route 104\n"
+	"who are watching over other convenient\l"
+	"items for POKéMON to hold.$"
+}
+
+script PetalburgWoods_EventScript_Leaf0 {
+	lockall
+	applymovement (LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft)
+	waitmovement (0)
+	addobject (LOCALID_PETALBURG_WOODS_LEAF)
+	setobjectxy (LOCALID_PETALBURG_WOODS_LEAF, 6, 15)
+	setvar (VAR_GENERIC_DUNGEON, 1)
+	goto (PetalburgWoods_EventScript_Leaf2)
+	end
+}
+
+script PetalburgWoods_EventScript_Leaf1 {
+	lockall
+	applymovement (LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft)
+	waitmovement (0)
+	addobject (LOCALID_PETALBURG_WOODS_LEAF)
+	setobjectxy (LOCALID_PETALBURG_WOODS_LEAF, 6, 16)
+	setvar (VAR_GENERIC_DUNGEON, 2)
+	goto (PetalburgWoods_EventScript_Leaf2)
+	end
+}
+
+script PetalburgWoods_EventScript_Leaf2 {
+	applymovement (LOCALID_PETALBURG_WOODS_LEAF, PetalburgWoods_Movement_LeafApproach)
+	waitmovement (0)
+	trainerbattle_single (TRAINER_PETALBURG_WOODS_LEAF, PetalburgWoods_Text_LeafIntro, PetalburgWoods_Text_LeafDefeat, PetalburgWoods_EventScript_LeafPostBattle)
+	releaseall
+	end
+}
+
+script PetalburgWoods_EventScript_LeafPostBattle {
+	setvar (B_LEVEL_CAP_VARIABLE, 15)
+	setvar (VAR_PETALBURG_WOODS_STATE, 2)
+	special (HealPlayerParty)
+	msgbox (PetalburgWoods_Text_LeafLevelCap, MSGBOX_AUTOCLOSE)
+	if (var(VAR_GENERIC_DUNGEON) == 1) {
+		applymovement (LOCALID_PETALBURG_WOODS_LEAF, PetalburgWoods_Movement_LeafLeave0)
+		waitmovement (0)
+		removeobject (LOCALID_PETALBURG_WOODS_LEAF)
+	}
+	else {
+		applymovement (LOCALID_PETALBURG_WOODS_LEAF, PetalburgWoods_Movement_LeafLeave1)
+		waitmovement (0)
+		removeobject (LOCALID_PETALBURG_WOODS_LEAF)
+	}
+	setvar (VAR_GENERIC_DUNGEON, 0)
+	end
+}
+
+movement PetalburgWoods_Movement_LeafApproach {
+	walk_up * 9
+	walk_right * 5
+	step_end
+}
+
+movement PetalburgWoods_Movement_LeafLeave0 {
+	walk_down
+	walk_right * 3
+	walk_up * 2
+}
+
+movement PetalburgWoods_Movement_LeafLeave1 {
+	walk_up
+	walk_right * 3
+	walk_up
+}
+
+text PetalburgWoods_Text_LeafIntro {
+	"Hi {PLAYER}, good to see you again!\n"
+	"Did you have any trouble finding your\l"
+	"way through the woods?\p"
+	"Oh? You ran in to TEAM AQUA? I hope\n"
+	"they didn't give you too much trouble!\p"
+	"A strong trainer like you should be able\n"
+	"to handle a grunt no problem.\p"
+	"Speaking of being a strong trainer, let's\n"
+	"see if these woods toughened you up!$"
+}
+
+text PetalburgWoods_Text_LeafDefeat {
+	"Wow, what a fight!$"
+}
+
+text PetalburgWoods_Text_LeafLevelCap {
+	"Thanks for another great battle!\n"
+	"I went ahead and healed your team for you,\l"
+	"and your POKéMON will be able to level up\l"
+	"more now.\p"
+	"See you later!$"
+}
+
+script PetalburgWoods_EventScript_Mankey {
+	msgbox (PetlaburgWoods_Text_Mankey, MSGBOX_DEFAULT)
+	end
+}
+
+text PetlaburgWoods_Text_Mankey {
+	"Monkey sounds$"
+}

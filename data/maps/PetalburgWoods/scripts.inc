@@ -493,352 +493,541 @@ PetalburgWoods_EventScript_Boy2::
 # 247 "data/maps/PetalburgWoods/scripts.pory"
 
 # 248 "data/maps/PetalburgWoods/scripts.pory"
-PetalburgWoods_EventScript_Girl::
-# 249 "data/maps/PetalburgWoods/scripts.pory"
-	lock
-# 250 "data/maps/PetalburgWoods/scripts.pory"
-	faceplayer
-# 251 "data/maps/PetalburgWoods/scripts.pory"
-	goto_if_set FLAG_RECEIVED_MIRACLE_SEED, PetalburgWoods_EventScript_ExplainMiracleSeed
-# 252 "data/maps/PetalburgWoods/scripts.pory"
-	msgbox PetalburgWoods_Text_TryUsingThisItem, MSGBOX_DEFAULT
-# 253 "data/maps/PetalburgWoods/scripts.pory"
-	giveitem ITEM_MIRACLE_SEED
-# 254 "data/maps/PetalburgWoods/scripts.pory"
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-# 255 "data/maps/PetalburgWoods/scripts.pory"
-	setflag FLAG_RECEIVED_MIRACLE_SEED
-# 256 "data/maps/PetalburgWoods/scripts.pory"
-	release
-# 257 "data/maps/PetalburgWoods/scripts.pory"
-	end
-# 258 "data/maps/PetalburgWoods/scripts.pory"
-
-# 259 "data/maps/PetalburgWoods/scripts.pory"
-PetalburgWoods_EventScript_ExplainMiracleSeed::
-# 260 "data/maps/PetalburgWoods/scripts.pory"
-	msgbox PetalburgWoods_Text_MiracleSeedExplanation, MSGBOX_DEFAULT
-# 261 "data/maps/PetalburgWoods/scripts.pory"
-	release
-# 262 "data/maps/PetalburgWoods/scripts.pory"
-	end
-# 263 "data/maps/PetalburgWoods/scripts.pory"
-
-# 264 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_EventScript_Sign1::
-# 265 "data/maps/PetalburgWoods/scripts.pory"
+# 249 "data/maps/PetalburgWoods/scripts.pory"
 	msgbox PetalburgWoods_Text_TrainerTipsExperience, MSGBOX_SIGN
-# 266 "data/maps/PetalburgWoods/scripts.pory"
+# 250 "data/maps/PetalburgWoods/scripts.pory"
 	end
-# 267 "data/maps/PetalburgWoods/scripts.pory"
+# 251 "data/maps/PetalburgWoods/scripts.pory"
 
-# 268 "data/maps/PetalburgWoods/scripts.pory"
+# 252 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_EventScript_Lyle::
-# 269 "data/maps/PetalburgWoods/scripts.pory"
+# 253 "data/maps/PetalburgWoods/scripts.pory"
 	trainerbattle_single TRAINER_LYLE, PetalburgWoods_Text_GoBugPokemonTeam, PetalburgWoods_Text_ICouldntWin
-# 270 "data/maps/PetalburgWoods/scripts.pory"
+# 254 "data/maps/PetalburgWoods/scripts.pory"
 	msgbox PetalburgWoods_Text_ImOutOfPokeBalls, MSGBOX_AUTOCLOSE
-# 271 "data/maps/PetalburgWoods/scripts.pory"
+# 255 "data/maps/PetalburgWoods/scripts.pory"
 	end
-# 272 "data/maps/PetalburgWoods/scripts.pory"
+# 256 "data/maps/PetalburgWoods/scripts.pory"
 
-# 273 "data/maps/PetalburgWoods/scripts.pory"
+# 257 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_EventScript_James::
-# 274 "data/maps/PetalburgWoods/scripts.pory"
+# 258 "data/maps/PetalburgWoods/scripts.pory"
 	trainerbattle_single TRAINER_JAMES, PetalburgWoods_Text_InstantlyPopularWithBugPokemon, PetalburgWoods_Text_CantBePopularIfILose
-# 275 "data/maps/PetalburgWoods/scripts.pory"
+# 259 "data/maps/PetalburgWoods/scripts.pory"
 	msgbox PetalburgWoods_Text_PeopleRespectYou, MSGBOX_AUTOCLOSE
-# 276 "data/maps/PetalburgWoods/scripts.pory"
+# 260 "data/maps/PetalburgWoods/scripts.pory"
 	end
-# 277 "data/maps/PetalburgWoods/scripts.pory"
+# 261 "data/maps/PetalburgWoods/scripts.pory"
 
-# 278 "data/maps/PetalburgWoods/scripts.pory"
+# 262 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_NotAOneToBeFound:
-# 279 "data/maps/PetalburgWoods/scripts.pory"
+# 263 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Hmmm…\n"
-# 280 "data/maps/PetalburgWoods/scripts.pory"
+# 264 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Not a one to be found…$"
-# 281 "data/maps/PetalburgWoods/scripts.pory"
+# 265 "data/maps/PetalburgWoods/scripts.pory"
 
-# 282 "data/maps/PetalburgWoods/scripts.pory"
+# 266 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_HaveYouSeenShroomish:
-# 283 "data/maps/PetalburgWoods/scripts.pory"
+# 267 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Hello, have you seen any POKéMON\n"
-# 284 "data/maps/PetalburgWoods/scripts.pory"
+# 268 "data/maps/PetalburgWoods/scripts.pory"
 	.string "called SHROOMISH around here?\p"
-# 285 "data/maps/PetalburgWoods/scripts.pory"
+# 269 "data/maps/PetalburgWoods/scripts.pory"
 	.string "I really love that POKéMON.$"
-# 286 "data/maps/PetalburgWoods/scripts.pory"
+# 270 "data/maps/PetalburgWoods/scripts.pory"
 
-# 287 "data/maps/PetalburgWoods/scripts.pory"
+# 271 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_IWasGoingToAmbushYou:
-# 288 "data/maps/PetalburgWoods/scripts.pory"
+# 272 "data/maps/PetalburgWoods/scripts.pory"
 	.string "I was going to ambush you, but you\n"
-# 289 "data/maps/PetalburgWoods/scripts.pory"
+# 273 "data/maps/PetalburgWoods/scripts.pory"
 	.string "had to dawdle in PETALBURG WOODS\l"
-# 290 "data/maps/PetalburgWoods/scripts.pory"
+# 274 "data/maps/PetalburgWoods/scripts.pory"
 	.string "forever, didn't you?\p"
-# 291 "data/maps/PetalburgWoods/scripts.pory"
+# 275 "data/maps/PetalburgWoods/scripts.pory"
 	.string "I got sick of waiting, so here I am!$"
+# 276 "data/maps/PetalburgWoods/scripts.pory"
+
+# 277 "data/maps/PetalburgWoods/scripts.pory"
+PetalburgWoods_Text_HandOverThosePapers:
+# 278 "data/maps/PetalburgWoods/scripts.pory"
+	.string "You! DEVON RESEARCHER!\p"
+# 279 "data/maps/PetalburgWoods/scripts.pory"
+	.string "Hand over those papers!$"
+# 280 "data/maps/PetalburgWoods/scripts.pory"
+
+# 281 "data/maps/PetalburgWoods/scripts.pory"
+PetalburgWoods_Text_YouHaveToHelpMe:
+# 282 "data/maps/PetalburgWoods/scripts.pory"
+	.string "Aiyeeeh!\p"
+# 283 "data/maps/PetalburgWoods/scripts.pory"
+	.string "You're a POKéMON TRAINER, aren't you?\n"
+# 284 "data/maps/PetalburgWoods/scripts.pory"
+	.string "You've got to help me, please!$"
+# 285 "data/maps/PetalburgWoods/scripts.pory"
+
+# 286 "data/maps/PetalburgWoods/scripts.pory"
+PetalburgWoods_Text_NoOneCrossesTeamAqua:
+# 287 "data/maps/PetalburgWoods/scripts.pory"
+	.string "Hunh? What do you think you're doing?\n"
+# 288 "data/maps/PetalburgWoods/scripts.pory"
+	.string "What, you're going to protect him?\p"
+# 289 "data/maps/PetalburgWoods/scripts.pory"
+	.string "No one who crosses TEAM AQUA\n"
+# 290 "data/maps/PetalburgWoods/scripts.pory"
+	.string "gets any mercy, not even a kid!\p"
+# 291 "data/maps/PetalburgWoods/scripts.pory"
+	.string "Come on and battle me!$"
 # 292 "data/maps/PetalburgWoods/scripts.pory"
 
 # 293 "data/maps/PetalburgWoods/scripts.pory"
-PetalburgWoods_Text_HandOverThosePapers:
-# 294 "data/maps/PetalburgWoods/scripts.pory"
-	.string "You! DEVON RESEARCHER!\p"
-# 295 "data/maps/PetalburgWoods/scripts.pory"
-	.string "Hand over those papers!$"
-# 296 "data/maps/PetalburgWoods/scripts.pory"
-
-# 297 "data/maps/PetalburgWoods/scripts.pory"
-PetalburgWoods_Text_YouHaveToHelpMe:
-# 298 "data/maps/PetalburgWoods/scripts.pory"
-	.string "Aiyeeeh!\p"
-# 299 "data/maps/PetalburgWoods/scripts.pory"
-	.string "You're a POKéMON TRAINER, aren't you?\n"
-# 300 "data/maps/PetalburgWoods/scripts.pory"
-	.string "You've got to help me, please!$"
-# 301 "data/maps/PetalburgWoods/scripts.pory"
-
-# 302 "data/maps/PetalburgWoods/scripts.pory"
-PetalburgWoods_Text_NoOneCrossesTeamAqua:
-# 303 "data/maps/PetalburgWoods/scripts.pory"
-	.string "Hunh? What do you think you're doing?\n"
-# 304 "data/maps/PetalburgWoods/scripts.pory"
-	.string "What, you're going to protect him?\p"
-# 305 "data/maps/PetalburgWoods/scripts.pory"
-	.string "No one who crosses TEAM AQUA\n"
-# 306 "data/maps/PetalburgWoods/scripts.pory"
-	.string "gets any mercy, not even a kid!\p"
-# 307 "data/maps/PetalburgWoods/scripts.pory"
-	.string "Come on and battle me!$"
-# 308 "data/maps/PetalburgWoods/scripts.pory"
-
-# 309 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_YoureKiddingMe:
-# 310 "data/maps/PetalburgWoods/scripts.pory"
+# 294 "data/maps/PetalburgWoods/scripts.pory"
 	.string "You're kidding me! You're tough!$"
-# 311 "data/maps/PetalburgWoods/scripts.pory"
+# 295 "data/maps/PetalburgWoods/scripts.pory"
 
-# 312 "data/maps/PetalburgWoods/scripts.pory"
+# 296 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_YouveGotSomeNerve:
-# 313 "data/maps/PetalburgWoods/scripts.pory"
+# 297 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Grrr… You've got some nerve\n"
-# 314 "data/maps/PetalburgWoods/scripts.pory"
+# 298 "data/maps/PetalburgWoods/scripts.pory"
 	.string "meddling with TEAM AQUA!\l"
-# 315 "data/maps/PetalburgWoods/scripts.pory"
+# 299 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Come on and battle me again!\p"
-# 316 "data/maps/PetalburgWoods/scripts.pory"
+# 300 "data/maps/PetalburgWoods/scripts.pory"
 	.string "I wish I could say that, but I'm out of\n"
-# 317 "data/maps/PetalburgWoods/scripts.pory"
+# 301 "data/maps/PetalburgWoods/scripts.pory"
 	.string "POKéMON…\p"
-# 318 "data/maps/PetalburgWoods/scripts.pory"
+# 302 "data/maps/PetalburgWoods/scripts.pory"
 	.string "And, hey, we of TEAM AQUA are also\n"
-# 319 "data/maps/PetalburgWoods/scripts.pory"
+# 303 "data/maps/PetalburgWoods/scripts.pory"
 	.string "after something in RUSTBORO.\p"
-# 320 "data/maps/PetalburgWoods/scripts.pory"
+# 304 "data/maps/PetalburgWoods/scripts.pory"
 	.string "I'll let you go today!$"
-# 321 "data/maps/PetalburgWoods/scripts.pory"
+# 305 "data/maps/PetalburgWoods/scripts.pory"
 
-# 322 "data/maps/PetalburgWoods/scripts.pory"
+# 306 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_ThatWasAwfullyClose:
-# 323 "data/maps/PetalburgWoods/scripts.pory"
+# 307 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Whew…\n"
-# 324 "data/maps/PetalburgWoods/scripts.pory"
+# 308 "data/maps/PetalburgWoods/scripts.pory"
 	.string "That was awfully close!\p"
-# 325 "data/maps/PetalburgWoods/scripts.pory"
+# 309 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Thanks to you, he didn't rob me of\n"
-# 326 "data/maps/PetalburgWoods/scripts.pory"
+# 310 "data/maps/PetalburgWoods/scripts.pory"
 	.string "these important papers.\p"
-# 327 "data/maps/PetalburgWoods/scripts.pory"
+# 311 "data/maps/PetalburgWoods/scripts.pory"
 	.string "I know, I'll give you a GREAT BALL as\n"
-# 328 "data/maps/PetalburgWoods/scripts.pory"
+# 312 "data/maps/PetalburgWoods/scripts.pory"
 	.string "my thanks!$"
-# 329 "data/maps/PetalburgWoods/scripts.pory"
+# 313 "data/maps/PetalburgWoods/scripts.pory"
 
-# 330 "data/maps/PetalburgWoods/scripts.pory"
+# 314 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_TeamAquaAfterSomethingInRustboro:
-# 331 "data/maps/PetalburgWoods/scripts.pory"
+# 315 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Didn't that TEAM AQUA thug say\n"
-# 332 "data/maps/PetalburgWoods/scripts.pory"
+# 316 "data/maps/PetalburgWoods/scripts.pory"
 	.string "they were after something in\l"
-# 333 "data/maps/PetalburgWoods/scripts.pory"
+# 317 "data/maps/PetalburgWoods/scripts.pory"
 	.string "RUSTBORO, too?$"
-# 334 "data/maps/PetalburgWoods/scripts.pory"
+# 318 "data/maps/PetalburgWoods/scripts.pory"
 
-# 335 "data/maps/PetalburgWoods/scripts.pory"
+# 319 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_ICantBeWastingTime:
-# 336 "data/maps/PetalburgWoods/scripts.pory"
+# 320 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Uh-oh! It's a crisis!\n"
-# 337 "data/maps/PetalburgWoods/scripts.pory"
+# 321 "data/maps/PetalburgWoods/scripts.pory"
 	.string "I can't be wasting time!$"
-# 338 "data/maps/PetalburgWoods/scripts.pory"
+# 322 "data/maps/PetalburgWoods/scripts.pory"
 
-# 339 "data/maps/PetalburgWoods/scripts.pory"
+# 323 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_YoureLoadedWithItems:
-# 340 "data/maps/PetalburgWoods/scripts.pory"
+# 324 "data/maps/PetalburgWoods/scripts.pory"
 	.string "You're loaded with items.\n"
-# 341 "data/maps/PetalburgWoods/scripts.pory"
+# 325 "data/maps/PetalburgWoods/scripts.pory"
 	.string "I can't give you this GREAT BALL.$"
-# 342 "data/maps/PetalburgWoods/scripts.pory"
+# 326 "data/maps/PetalburgWoods/scripts.pory"
 
-# 343 "data/maps/PetalburgWoods/scripts.pory"
+# 327 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_GoBugPokemonTeam:
-# 344 "data/maps/PetalburgWoods/scripts.pory"
+# 328 "data/maps/PetalburgWoods/scripts.pory"
 	.string "I caught a whole bunch of POKéMON!\p"
-# 345 "data/maps/PetalburgWoods/scripts.pory"
+# 329 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Go, go, go!\n"
-# 346 "data/maps/PetalburgWoods/scripts.pory"
+# 330 "data/maps/PetalburgWoods/scripts.pory"
 	.string "My BUG POKéMON team!$"
-# 347 "data/maps/PetalburgWoods/scripts.pory"
+# 331 "data/maps/PetalburgWoods/scripts.pory"
 
-# 348 "data/maps/PetalburgWoods/scripts.pory"
+# 332 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_ICouldntWin:
-# 349 "data/maps/PetalburgWoods/scripts.pory"
+# 333 "data/maps/PetalburgWoods/scripts.pory"
 	.string "I have all these POKéMON,\n"
-# 350 "data/maps/PetalburgWoods/scripts.pory"
+# 334 "data/maps/PetalburgWoods/scripts.pory"
 	.string "but I couldn't win…$"
-# 351 "data/maps/PetalburgWoods/scripts.pory"
+# 335 "data/maps/PetalburgWoods/scripts.pory"
 
-# 352 "data/maps/PetalburgWoods/scripts.pory"
+# 336 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_ImOutOfPokeBalls:
-# 353 "data/maps/PetalburgWoods/scripts.pory"
+# 337 "data/maps/PetalburgWoods/scripts.pory"
 	.string "I caught a bunch of POKéMON.\n"
-# 354 "data/maps/PetalburgWoods/scripts.pory"
+# 338 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Now I'm out of POKé BALLS.$"
-# 355 "data/maps/PetalburgWoods/scripts.pory"
+# 339 "data/maps/PetalburgWoods/scripts.pory"
 
-# 356 "data/maps/PetalburgWoods/scripts.pory"
+# 340 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_InstantlyPopularWithBugPokemon:
-# 357 "data/maps/PetalburgWoods/scripts.pory"
+# 341 "data/maps/PetalburgWoods/scripts.pory"
 	.string "If you take BUG POKéMON to school,\n"
-# 358 "data/maps/PetalburgWoods/scripts.pory"
+# 342 "data/maps/PetalburgWoods/scripts.pory"
 	.string "you get to be instantly popular!$"
-# 359 "data/maps/PetalburgWoods/scripts.pory"
+# 343 "data/maps/PetalburgWoods/scripts.pory"
 
-# 360 "data/maps/PetalburgWoods/scripts.pory"
+# 344 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_CantBePopularIfILose:
-# 361 "data/maps/PetalburgWoods/scripts.pory"
+# 345 "data/maps/PetalburgWoods/scripts.pory"
 	.string "I can't be popular if I lose.$"
-# 362 "data/maps/PetalburgWoods/scripts.pory"
+# 346 "data/maps/PetalburgWoods/scripts.pory"
 
-# 363 "data/maps/PetalburgWoods/scripts.pory"
+# 347 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_PeopleRespectYou:
-# 364 "data/maps/PetalburgWoods/scripts.pory"
+# 348 "data/maps/PetalburgWoods/scripts.pory"
 	.string "If you have a big BUG POKéMON,\n"
-# 365 "data/maps/PetalburgWoods/scripts.pory"
+# 349 "data/maps/PetalburgWoods/scripts.pory"
 	.string "people respect you for it.$"
-# 366 "data/maps/PetalburgWoods/scripts.pory"
+# 350 "data/maps/PetalburgWoods/scripts.pory"
 
-# 367 "data/maps/PetalburgWoods/scripts.pory"
+# 351 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_StayOutOfTallGrass:
-# 368 "data/maps/PetalburgWoods/scripts.pory"
+# 352 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Yo, there!\n"
-# 369 "data/maps/PetalburgWoods/scripts.pory"
+# 353 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Your POKéMON doing okay?\p"
-# 370 "data/maps/PetalburgWoods/scripts.pory"
+# 354 "data/maps/PetalburgWoods/scripts.pory"
 	.string "If your POKéMON are weak and you want\n"
-# 371 "data/maps/PetalburgWoods/scripts.pory"
+# 355 "data/maps/PetalburgWoods/scripts.pory"
 	.string "to avoid battles, you should stay out\l"
-# 372 "data/maps/PetalburgWoods/scripts.pory"
+# 356 "data/maps/PetalburgWoods/scripts.pory"
 	.string "of tall grass.$"
-# 373 "data/maps/PetalburgWoods/scripts.pory"
+# 357 "data/maps/PetalburgWoods/scripts.pory"
 
-# 374 "data/maps/PetalburgWoods/scripts.pory"
+# 358 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_HiddenItemsExplanation:
-# 375 "data/maps/PetalburgWoods/scripts.pory"
+# 359 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Sometimes, there are things on the\n"
-# 376 "data/maps/PetalburgWoods/scripts.pory"
+# 360 "data/maps/PetalburgWoods/scripts.pory"
 	.string "ground even if you can't see them.\p"
-# 377 "data/maps/PetalburgWoods/scripts.pory"
+# 361 "data/maps/PetalburgWoods/scripts.pory"
 	.string "That's why I always check where I'm\n"
-# 378 "data/maps/PetalburgWoods/scripts.pory"
+# 362 "data/maps/PetalburgWoods/scripts.pory"
 	.string "walking.$"
-# 379 "data/maps/PetalburgWoods/scripts.pory"
+# 363 "data/maps/PetalburgWoods/scripts.pory"
 
-# 380 "data/maps/PetalburgWoods/scripts.pory"
-PetalburgWoods_Text_TryUsingThisItem:
-# 381 "data/maps/PetalburgWoods/scripts.pory"
-	.string "Oh, neat!\n"
-# 382 "data/maps/PetalburgWoods/scripts.pory"
-	.string "That's the BADGE from RUSTBORO GYM!\p"
-# 383 "data/maps/PetalburgWoods/scripts.pory"
-	.string "You must be a TRAINER.\n"
-# 384 "data/maps/PetalburgWoods/scripts.pory"
-	.string "You should try using this item.$"
-# 385 "data/maps/PetalburgWoods/scripts.pory"
-
-# 386 "data/maps/PetalburgWoods/scripts.pory"
-PetalburgWoods_Text_MiracleSeedExplanation:
-# 387 "data/maps/PetalburgWoods/scripts.pory"
-	.string "It's a MIRACLE SEED.\n"
-# 388 "data/maps/PetalburgWoods/scripts.pory"
-	.string "If a POKéMON holds that item, its\l"
-# 389 "data/maps/PetalburgWoods/scripts.pory"
-	.string "GRASS-type moves become stronger.\p"
-# 390 "data/maps/PetalburgWoods/scripts.pory"
-	.string "Besides MIRACLE SEED, I think there are\n"
-# 391 "data/maps/PetalburgWoods/scripts.pory"
-	.string "other convenient items for POKéMON\l"
-# 392 "data/maps/PetalburgWoods/scripts.pory"
-	.string "to hold.$"
-# 393 "data/maps/PetalburgWoods/scripts.pory"
-
-# 394 "data/maps/PetalburgWoods/scripts.pory"
+# 364 "data/maps/PetalburgWoods/scripts.pory"
 PetalburgWoods_Text_TrainerTipsExperience:
-# 395 "data/maps/PetalburgWoods/scripts.pory"
+# 365 "data/maps/PetalburgWoods/scripts.pory"
 	.string "TRAINER TIPS\p"
-# 396 "data/maps/PetalburgWoods/scripts.pory"
+# 366 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Any POKéMON that appears even once\n"
-# 397 "data/maps/PetalburgWoods/scripts.pory"
+# 367 "data/maps/PetalburgWoods/scripts.pory"
 	.string "in a battle is awarded EXP Points.\p"
-# 398 "data/maps/PetalburgWoods/scripts.pory"
+# 368 "data/maps/PetalburgWoods/scripts.pory"
 	.string "To raise a weak POKéMON, put it at the\n"
-# 399 "data/maps/PetalburgWoods/scripts.pory"
+# 369 "data/maps/PetalburgWoods/scripts.pory"
 	.string "left of the team list.\p"
-# 400 "data/maps/PetalburgWoods/scripts.pory"
+# 370 "data/maps/PetalburgWoods/scripts.pory"
 	.string "As soon as a battle starts, switch it\n"
-# 401 "data/maps/PetalburgWoods/scripts.pory"
+# 371 "data/maps/PetalburgWoods/scripts.pory"
 	.string "out. It will earn EXP Points without\l"
-# 402 "data/maps/PetalburgWoods/scripts.pory"
+# 372 "data/maps/PetalburgWoods/scripts.pory"
 	.string "being exposed to any harm.$"
 
 PetalburgWoods_EventScript_Dustin::
-# 407 "data/maps/PetalburgWoods/scripts.pory"
-	trainerbattle_single TRAINER_DUSTIN, Route104_Text_DustinIntro, Route104_Text_DustinDefeat
-# 408 "data/maps/PetalburgWoods/scripts.pory"
-	msgbox Route104_Text_DustinPostBattle, MSGBOX_AUTOCLOSE
+# 377 "data/maps/PetalburgWoods/scripts.pory"
+	trainerbattle_single TRAINER_DUSTIN, PetalburgWoods_Text_DustinIntro, PetalburgWoods_Text_DustinDefeat
+# 378 "data/maps/PetalburgWoods/scripts.pory"
+	msgbox PetalburgWoods_Text_DustinPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
 PetalburgWoods_EventScript_Kyler::
-# 424 "data/maps/PetalburgWoods/scripts.pory"
-	trainerbattle_single TRAINER_KYLER, Route104_Text_KylerIntro, Route104_Text_KylerDefeat
-# 425 "data/maps/PetalburgWoods/scripts.pory"
-	msgbox Route104_Text_KylerPostBattle, MSGBOX_AUTOCLOSE
+# 394 "data/maps/PetalburgWoods/scripts.pory"
+	trainerbattle_single TRAINER_KYLER, PetalburgWoods_Text_KylerIntro, PetalburgWoods_Text_KylerDefeat
+# 395 "data/maps/PetalburgWoods/scripts.pory"
+	msgbox PetalburgWoods_Text_KylerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
-Route104_Text_DustinIntro::
+PetalburgWoods_EventScript_Frank::
 # 411 "data/maps/PetalburgWoods/scripts.pory"
+	trainerbattle_single TRAINER_FRANK, PetalburgWoods_Text_FrankIntro, PetalburgWoods_Text_FrankDefeat
+# 412 "data/maps/PetalburgWoods/scripts.pory"
+	msgbox PetalburgWoods_Text_FrankPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+PetalburgWoods_EventScript_Lily::
+# 428 "data/maps/PetalburgWoods/scripts.pory"
+	trainerbattle_single TRAINER_LILY, PetalburgWoods_Text_LilyIntro, PetalburgWoods_Text_LilyDefeat, PetalburgWoods_EventScript_MiracleSeed
+# 429 "data/maps/PetalburgWoods/scripts.pory"
+	goto_if_unset FLAG_RECEIVED_MIRACLE_SEED, PetalburgWoods_EventScript_Lily_2
+# 433 "data/maps/PetalburgWoods/scripts.pory"
+	msgbox PetalburgWoods_Text_LilyPostBattle, MSGBOX_AUTOCLOSE
+PetalburgWoods_EventScript_Lily_1:
+	end
+
+PetalburgWoods_EventScript_Lily_2:
+# 430 "data/maps/PetalburgWoods/scripts.pory"
+	goto PetalburgWoods_EventScript_MiracleSeed
+	goto PetalburgWoods_EventScript_Lily_1
+
+
+PetalburgWoods_EventScript_MiracleSeed::
+# 454 "data/maps/PetalburgWoods/scripts.pory"
+	msgbox PetalburgWoods_Text_HaveThisSeed, MSGBOX_AUTOCLOSE
+# 455 "data/maps/PetalburgWoods/scripts.pory"
+	giveitem ITEM_MIRACLE_SEED
+# 456 "data/maps/PetalburgWoods/scripts.pory"
+	compare VAR_RESULT, FALSE
+	goto_if_eq PetalburgWoods_EventScript_MiracleSeed_2
+# 460 "data/maps/PetalburgWoods/scripts.pory"
+	setflag FLAG_RECEIVED_MIRACLE_SEED
+# 461 "data/maps/PetalburgWoods/scripts.pory"
+	msgbox PetalburgWoods_Text_TryBattlingOthers, MSGBOX_AUTOCLOSE
+PetalburgWoods_EventScript_MiracleSeed_1:
+	end
+
+PetalburgWoods_EventScript_MiracleSeed_2:
+# 457 "data/maps/PetalburgWoods/scripts.pory"
+	goto Common_EventScript_ShowBagIsFull
+	goto PetalburgWoods_EventScript_MiracleSeed_1
+
+
+PetalburgWoods_EventScript_Leaf0::
+# 480 "data/maps/PetalburgWoods/scripts.pory"
+	lockall
+# 481 "data/maps/PetalburgWoods/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+# 482 "data/maps/PetalburgWoods/scripts.pory"
+	waitmovement 0
+# 483 "data/maps/PetalburgWoods/scripts.pory"
+	addobject LOCALID_PETALBURG_WOODS_LEAF
+# 484 "data/maps/PetalburgWoods/scripts.pory"
+	setobjectxy LOCALID_PETALBURG_WOODS_LEAF, 6, 15
+# 485 "data/maps/PetalburgWoods/scripts.pory"
+	setvar VAR_GENERIC_DUNGEON, 1
+# 486 "data/maps/PetalburgWoods/scripts.pory"
+	goto PetalburgWoods_EventScript_Leaf2
+	end
+
+
+PetalburgWoods_EventScript_Leaf1::
+# 491 "data/maps/PetalburgWoods/scripts.pory"
+	lockall
+# 492 "data/maps/PetalburgWoods/scripts.pory"
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+# 493 "data/maps/PetalburgWoods/scripts.pory"
+	waitmovement 0
+# 494 "data/maps/PetalburgWoods/scripts.pory"
+	addobject LOCALID_PETALBURG_WOODS_LEAF
+# 495 "data/maps/PetalburgWoods/scripts.pory"
+	setobjectxy LOCALID_PETALBURG_WOODS_LEAF, 6, 16
+# 496 "data/maps/PetalburgWoods/scripts.pory"
+	setvar VAR_GENERIC_DUNGEON, 2
+# 497 "data/maps/PetalburgWoods/scripts.pory"
+	goto PetalburgWoods_EventScript_Leaf2
+	end
+
+
+PetalburgWoods_EventScript_Leaf2::
+# 502 "data/maps/PetalburgWoods/scripts.pory"
+	applymovement LOCALID_PETALBURG_WOODS_LEAF, PetalburgWoods_Movement_LeafApproach
+# 503 "data/maps/PetalburgWoods/scripts.pory"
+	waitmovement 0
+# 504 "data/maps/PetalburgWoods/scripts.pory"
+	trainerbattle_single TRAINER_PETALBURG_WOODS_LEAF, PetalburgWoods_Text_LeafIntro, PetalburgWoods_Text_LeafDefeat, PetalburgWoods_EventScript_LeafPostBattle
+# 505 "data/maps/PetalburgWoods/scripts.pory"
+	releaseall
+	end
+
+
+PetalburgWoods_EventScript_LeafPostBattle::
+# 510 "data/maps/PetalburgWoods/scripts.pory"
+	setvar B_LEVEL_CAP_VARIABLE, 15
+# 511 "data/maps/PetalburgWoods/scripts.pory"
+	setvar VAR_PETALBURG_WOODS_STATE, 2
+# 512 "data/maps/PetalburgWoods/scripts.pory"
+	msgbox PetalburgWoods_Text_LeafLevelCap, MSGBOX_AUTOCLOSE
+# 513 "data/maps/PetalburgWoods/scripts.pory"
+	compare VAR_GENERIC_DUNGEON, 1
+	goto_if_eq PetalburgWoods_EventScript_LeafPostBattle_2
+# 519 "data/maps/PetalburgWoods/scripts.pory"
+	applymovement LOCALID_PETALBURG_WOODS_LEAF, PetalburgWoods_Movement_LeafLeave1
+# 520 "data/maps/PetalburgWoods/scripts.pory"
+	waitmovement 0
+# 521 "data/maps/PetalburgWoods/scripts.pory"
+	removeobject LOCALID_PETALBURG_WOODS_LEAF
+PetalburgWoods_EventScript_LeafPostBattle_1:
+# 523 "data/maps/PetalburgWoods/scripts.pory"
+	setvar VAR_GENERIC_DUNGEON, 0
+	end
+
+PetalburgWoods_EventScript_LeafPostBattle_2:
+# 514 "data/maps/PetalburgWoods/scripts.pory"
+	applymovement LOCALID_PETALBURG_WOODS_LEAF, PetalburgWoods_Movement_LeafLeave0
+# 515 "data/maps/PetalburgWoods/scripts.pory"
+	waitmovement 0
+# 516 "data/maps/PetalburgWoods/scripts.pory"
+	removeobject LOCALID_PETALBURG_WOODS_LEAF
+	goto PetalburgWoods_EventScript_LeafPostBattle_1
+
+
+# 527 "data/maps/PetalburgWoods/scripts.pory"
+PetalburgWoods_Movement_LeafApproach:
+# 528 "data/maps/PetalburgWoods/scripts.pory"
+	walk_up
+# 528 "data/maps/PetalburgWoods/scripts.pory"
+	walk_up
+# 528 "data/maps/PetalburgWoods/scripts.pory"
+	walk_up
+# 528 "data/maps/PetalburgWoods/scripts.pory"
+	walk_up
+# 528 "data/maps/PetalburgWoods/scripts.pory"
+	walk_up
+# 528 "data/maps/PetalburgWoods/scripts.pory"
+	walk_up
+# 528 "data/maps/PetalburgWoods/scripts.pory"
+	walk_up
+# 528 "data/maps/PetalburgWoods/scripts.pory"
+	walk_up
+# 528 "data/maps/PetalburgWoods/scripts.pory"
+	walk_up
+# 529 "data/maps/PetalburgWoods/scripts.pory"
+	walk_right
+# 529 "data/maps/PetalburgWoods/scripts.pory"
+	walk_right
+# 529 "data/maps/PetalburgWoods/scripts.pory"
+	walk_right
+# 529 "data/maps/PetalburgWoods/scripts.pory"
+	walk_right
+# 529 "data/maps/PetalburgWoods/scripts.pory"
+	walk_right
+# 530 "data/maps/PetalburgWoods/scripts.pory"
+	step_end
+
+# 533 "data/maps/PetalburgWoods/scripts.pory"
+PetalburgWoods_Movement_LeafLeave0:
+# 534 "data/maps/PetalburgWoods/scripts.pory"
+	walk_down
+# 535 "data/maps/PetalburgWoods/scripts.pory"
+	walk_right
+# 535 "data/maps/PetalburgWoods/scripts.pory"
+	walk_right
+# 535 "data/maps/PetalburgWoods/scripts.pory"
+	walk_right
+# 536 "data/maps/PetalburgWoods/scripts.pory"
+	walk_up
+# 536 "data/maps/PetalburgWoods/scripts.pory"
+	walk_up
+	step_end
+
+# 539 "data/maps/PetalburgWoods/scripts.pory"
+PetalburgWoods_Movement_LeafLeave1:
+# 540 "data/maps/PetalburgWoods/scripts.pory"
+	walk_up
+# 541 "data/maps/PetalburgWoods/scripts.pory"
+	walk_right
+# 541 "data/maps/PetalburgWoods/scripts.pory"
+	walk_right
+# 541 "data/maps/PetalburgWoods/scripts.pory"
+	walk_right
+# 542 "data/maps/PetalburgWoods/scripts.pory"
+	walk_up
+	step_end
+
+PetalburgWoods_Text_DustinIntro::
+# 381 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Hey! I was playing with that!$"
 
-Route104_Text_DustinDefeat::
-# 415 "data/maps/PetalburgWoods/scripts.pory"
+PetalburgWoods_Text_DustinDefeat::
+# 385 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Fine, you can have a turn...$"
 
-Route104_Text_DustinPostBattle::
-# 419 "data/maps/PetalburgWoods/scripts.pory"
+PetalburgWoods_Text_DustinPostBattle::
+# 389 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Do you want to play in the trees with me?$"
 
-Route104_Text_KylerIntro::
-# 428 "data/maps/PetalburgWoods/scripts.pory"
+PetalburgWoods_Text_KylerIntro::
+# 398 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Do you want to hear some bug facts?$"
 
-Route104_Text_KylerDefeat::
-# 432 "data/maps/PetalburgWoods/scripts.pory"
+PetalburgWoods_Text_KylerDefeat::
+# 402 "data/maps/PetalburgWoods/scripts.pory"
 	.string "Okay, no bug facts this time.$"
 
-Route104_Text_KylerPostBattle::
-# 436 "data/maps/PetalburgWoods/scripts.pory"
+PetalburgWoods_Text_KylerPostBattle::
+# 406 "data/maps/PetalburgWoods/scripts.pory"
 	.string "I really like bugs.$"
+
+PetalburgWoods_Text_FrankIntro::
+# 415 "data/maps/PetalburgWoods/scripts.pory"
+	.string "Me and my bugs are ready to rumble!$"
+
+PetalburgWoods_Text_FrankDefeat::
+# 419 "data/maps/PetalburgWoods/scripts.pory"
+	.string "Uh oh, my bugs got tumbled!$"
+
+PetalburgWoods_Text_FrankPostBattle::
+# 423 "data/maps/PetalburgWoods/scripts.pory"
+	.string "My bugs are rough and tough!$"
+
+PetalburgWoods_Text_LilyIntro::
+# 438 "data/maps/PetalburgWoods/scripts.pory"
+	.string "Look at this cool seed I found!\n"
+	.string "You can have it if you battle with me!$"
+
+PetalburgWoods_Text_LilyDefeat::
+# 443 "data/maps/PetalburgWoods/scripts.pory"
+	.string "Thanks for fighting, hope you enjoy\n"
+	.string "the cool seed!$"
+
+PetalburgWoods_Text_LilyPostBattle::
+# 448 "data/maps/PetalburgWoods/scripts.pory"
+	.string "Don't worry, there are plenty more\n"
+	.string "cool seeds I can find!$"
+
+PetalburgWoods_Text_HaveThisSeed::
+# 466 "data/maps/PetalburgWoods/scripts.pory"
+	.string "Here, take this cool seed I found,\n"
+	.string "it's a MIRACLE SEED. If a POKéMON\l"
+	.string "holds that item, its GRASS-type moves\l"
+	.string "become stronger.$"
+
+PetalburgWoods_Text_TryBattlingOthers::
+# 473 "data/maps/PetalburgWoods/scripts.pory"
+	.string "There are some boys on Route 104\n"
+	.string "who are watching over other convenient\l"
+	.string "items for POKéMON to hold.$"
+
+PetalburgWoods_Text_LeafIntro::
+# 545 "data/maps/PetalburgWoods/scripts.pory"
+	.string "Hi {PLAYER}, good to see you again!\n"
+	.string "Did you have any trouble finding your way\l"
+	.string "through the woods?\p"
+	.string "Oh? You ran in to TEAM AQUA? I hope they\n"
+	.string "didn't give you too much trouble! A strong\l"
+	.string "trainer like you should be able to handle\l"
+	.string "a grunt no problem.\p"
+	.string "Speaking of being a strong trainer, let's\n"
+	.string "see if these woods toughened you up at all!$"
+
+PetalburgWoods_Text_LeafDefeat::
+# 557 "data/maps/PetalburgWoods/scripts.pory"
+	.string "Wow, what a fight!$"
+
+PetalburgWoods_Text_LeafLevelCap::
+# 561 "data/maps/PetalburgWoods/scripts.pory"
+	.string "Thanks for another great battle!\n"
+	.string "Your POKéMON will be able to level up more now.\l"
+	.string "See you later!$"

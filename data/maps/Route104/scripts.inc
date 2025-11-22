@@ -1745,7 +1745,7 @@ Route104_EventScript_BuySomethingNice::
 # 873 "data/maps/Route104/scripts.pory"
 	msgbox Route104_Text_BuySomethingNice, MSGBOX_AUTOCLOSE
 # 874 "data/maps/Route104/scripts.pory"
-	giveitem ITEM_NUGGET, 2
+	giveitem ITEM_NUGGET, 1
 # 875 "data/maps/Route104/scripts.pory"
 	release
 # 876 "data/maps/Route104/scripts.pory"
@@ -2151,6 +2151,22 @@ Route104_EventScript_Veronica::
 	end
 
 
+Route104_EventScript_Zack::
+# 1098 "data/maps/Route104/scripts.pory"
+	trainerbattle_single TRAINER_ZACK, Route104_Text_ZackIntro, Route104_Text_ZackDefeat
+# 1099 "data/maps/Route104/scripts.pory"
+	msgbox Route104_Text_ZackPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+Route104_EventScript_Kenzie::
+# 1117 "data/maps/Route104/scripts.pory"
+	trainerbattle_single TRAINER_KENZIE, Route104_Text_KenzieIntro, Route104_Text_KenzieDefeat
+# 1118 "data/maps/Route104/scripts.pory"
+	msgbox Route104_Text_KenziePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
 Route104_Text_VeronicaIntro::
 # 1081 "data/maps/Route104/scripts.pory"
 	.string "I can't wait to picnic at the beach!\p"
@@ -2166,3 +2182,29 @@ Route104_Text_VeronicaPostBattle::
 	.string "Picnic at the beach?\n"
 	.string "Or in the woods?\l"
 	.string "It's an impossible choice!$"
+
+Route104_Text_ZackIntro::
+# 1103 "data/maps/Route104/scripts.pory"
+	.string "Look what I found! It's so cool, right?$"
+
+Route104_Text_ZackDefeat::
+# 1107 "data/maps/Route104/scripts.pory"
+	.string "Okay, you can keep it.$"
+
+Route104_Text_ZackPostBattle::
+# 1111 "data/maps/Route104/scripts.pory"
+	.string "I'm sure I can find another stick to\n"
+	.string "burn around here somewhere.$"
+
+Route104_Text_KenzieIntro::
+# 1122 "data/maps/Route104/scripts.pory"
+	.string "Hi, wanna battle?\n"
+	.string "I bet you didn't see me there!$"
+
+Route104_Text_KenzieDefeat::
+# 1127 "data/maps/Route104/scripts.pory"
+	.string "So much for the element of surprise...$"
+
+Route104_Text_KenziePostBattle::
+# 1131 "data/maps/Route104/scripts.pory"
+	.string "I'm hiding in plain sight.$"

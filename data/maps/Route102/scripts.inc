@@ -361,22 +361,22 @@ Route102_EventScript_LeafBattle::
 
 Route102_EventScript_LevelCap::
 # 187 "data/maps/Route102/scripts.pory"
-	setvar B_LEVEL_CAP_VARIABLE, 10
+	setvar B_LEVEL_CAP_VARIABLE, 11
 # 188 "data/maps/Route102/scripts.pory"
 	msgbox Route102_Text_LeafLevelCap, MSGBOX_AUTOCLOSE
 # 189 "data/maps/Route102/scripts.pory"
 	applymovement LOCALID_ROUTE102_LEAF2, Route102_Movement_LeafDefeated
 # 190 "data/maps/Route102/scripts.pory"
+	waitmovement 0
+# 191 "data/maps/Route102/scripts.pory"
+	removeobject LOCALID_ROUTE102_LEAF2
+# 192 "data/maps/Route102/scripts.pory"
 	setflag FLAG_HIDE_ROUTE102_LEAF2
 	end
 
 
-# 210 "data/maps/Route102/scripts.pory"
-Route102_Movement_LeafDefeated:
-# 211 "data/maps/Route102/scripts.pory"
-	walk_left
 # 212 "data/maps/Route102/scripts.pory"
-	walk_left
+Route102_Movement_LeafDefeated:
 # 213 "data/maps/Route102/scripts.pory"
 	walk_left
 # 214 "data/maps/Route102/scripts.pory"
@@ -390,20 +390,24 @@ Route102_Movement_LeafDefeated:
 # 218 "data/maps/Route102/scripts.pory"
 	walk_left
 # 219 "data/maps/Route102/scripts.pory"
+	walk_left
+# 220 "data/maps/Route102/scripts.pory"
+	walk_left
+# 221 "data/maps/Route102/scripts.pory"
 	step_end
 
 Route102_Text_LeafLevelCap::
-# 194 "data/maps/Route102/scripts.pory"
+# 196 "data/maps/Route102/scripts.pory"
 	.string "LEAF: What a great fight!\n"
 	.string "You may notice that you can now level\l"
 	.string "up your POKéMON even more.\p"
 	.string "I'll see you again soon!$"
 
 Route102_Text_LeafBattleIntro::
-# 201 "data/maps/Route102/scripts.pory"
+# 203 "data/maps/Route102/scripts.pory"
 	.string "Alright! Time to show me what you got.\n"
 	.string "I hope you have been training!$"
 
 Route102_Text_LeafDefeat::
-# 206 "data/maps/Route102/scripts.pory"
+# 208 "data/maps/Route102/scripts.pory"
 	.string "Wow, you have been training!$"

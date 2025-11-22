@@ -184,9 +184,11 @@ script Route102_EventScript_LeafBattle {
 	}
     
 script Route102_EventScript_LevelCap {
-	setvar (B_LEVEL_CAP_VARIABLE, 10)
+	setvar (B_LEVEL_CAP_VARIABLE, 11)
 	msgbox (Route102_Text_LeafLevelCap, MSGBOX_AUTOCLOSE)
     applymovement (LOCALID_ROUTE102_LEAF2, Route102_Movement_LeafDefeated)
+	waitmovement (0)
+	removeobject (LOCALID_ROUTE102_LEAF2)
     setflag (FLAG_HIDE_ROUTE102_LEAF2)
 	end
     }
